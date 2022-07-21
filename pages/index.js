@@ -11,14 +11,15 @@ export default function Home() {
 		'https://api.github.com/repos/vercel/swr'
 	);
 
-	const { data: posts, error: postsError } = useFetchData(
-		'https://jsonplaceholder.typicode.com/posts',
-		page
-	);
+	const {
+		data: posts,
+		error: postsError,
+		isLoading: postsLoading
+	} = useFetchData('https://jsonplaceholder.typicode.com/posts', page);
 
-	if (error || postsError) return 'An error has occurred.';
+	// if (error || postsError) return 'An error has occurred.';
 
-	posts && console.log(posts);
+	if (isLoading || postsLoading) return <p>Loading...</p>;
 	return (
 		<div className={styles.container}>
 			<Head>

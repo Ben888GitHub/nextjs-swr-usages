@@ -15,6 +15,7 @@ export const useFetchData = (url, page) => {
 			: url,
 		fetchData,
 		{
+			refreshInterval: 1000,
 			keepPreviousData: true
 		}
 	);
