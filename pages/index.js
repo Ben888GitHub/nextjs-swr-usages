@@ -35,7 +35,7 @@ export default function Home({ fallback }) {
 
 	// if (error || postsError) return 'An error has occurred.';
 
-	if (isLoading || postsLoading) return <p>Loading...</p>;
+	// if (isLoading || postsLoading) return <p>Loading...</p>;
 	return (
 		<SWRConfig value={{ fallback }}>
 			<div className={styles.container}>
