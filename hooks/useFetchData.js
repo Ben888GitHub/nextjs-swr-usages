@@ -69,3 +69,5 @@ export const useInfinitePosts = (url, page) => {
 		isRefreshing
 	};
 };
+
+export { fetchData };
